@@ -1,5 +1,5 @@
-# BlitzLog
-Helldivers 2 seed scouter, for people who wanna watch Youtube/drink Pepsi/whatever while a bot navigates HD2 UI for them and generates a collage of all available seed.
+# SeedScouter
+Helldivers 2 seed scouter, for people who wanna watch Youtube/drink Pepsi/whatever while a bot navigates HD2 UI for them and generates a collage of all available seeds.
 
 See [Setup][1] for how to download, launch, and configure <br>
 then [Guide][2] for how to use <br>
