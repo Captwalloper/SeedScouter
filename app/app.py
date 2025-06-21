@@ -4,11 +4,15 @@ from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QHBoxLayout, QWidget, QTextEdit
 
 from app.assets import Icon
+from app.keybind.keybind import ScouterBinds, Keybind as KB
+
+binds = ScouterBinds(
+    restartHD2="f8",
+)
 
 def restart_HD2():
     hd2_process = None
     for proc in psutil.process_iter():
-        # check whether the process name matches
         if proc.name() == 'helldivers2.exe':
             hd2_process = proc
     if (hd2_process != None):
@@ -44,5 +48,9 @@ app = QApplication(sys.argv)
 app.setWindowIcon(QIcon(Icon.blitz))
 window = MainWindow()
 window.show()
+
+KB.SetupKeybinds([
+    KB(binds.restartHD2, restart_HD2),
+])
 
 app.exec()
