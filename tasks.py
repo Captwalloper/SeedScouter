@@ -7,12 +7,12 @@ from invoke import task
 #     """
 #     c.run('pyinstaller --clean BlitzLog.spec')
 
-# @task
-# def run(c):
-#     """
-#     Run the application as a script on host
-#     """
-#     c.run('python -m app.app')
+@task
+def run(c):
+    """
+    Run the application as a script on host
+    """
+    c.run('python -m app.app')
 
 @task
 def restore(c):

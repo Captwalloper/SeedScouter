@@ -1,6 +1,7 @@
 pyqt6
 pyinstaller
 keyboard
-python-dateutil
 pytest
 invoke
+psutil
+pyautogui
