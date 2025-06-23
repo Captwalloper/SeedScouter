@@ -1,11 +1,11 @@
 from invoke import task
 
-# @task
-# def build(c):
-#     """
-#     Use pyinstaller to build the exe (outputs to 'dist')
-#     """
-#     c.run('pyinstaller --clean BlitzLog.spec')
+@task
+def build(c):
+    """
+    Use pyinstaller to build the exe (outputs to 'dist')
+    """
+    c.run('pyinstaller --clean SeedScouter.spec')
 
 @task
 def run(c):

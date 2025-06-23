@@ -11,10 +11,7 @@ binds = ScouterBinds(
 )
 
 def restart_HD2():
-    hd2_process = None
-    for proc in psutil.process_iter():
-        if proc.name() == 'helldivers2.exe':
-            hd2_process = proc
+    hd2_process = next((proc for proc in psutil.process_iter() if proc.name() == 'helldivers2.exe'), None)
     if (hd2_process != None):
         hd2_process.kill()
         sleep(2)
@@ -31,15 +28,8 @@ class MainWindow(QMainWindow):
         control_layout.addWidget(self.restartButton)
         self.restartButton.clicked.connect(restart_HD2)
 
-        # log_layout = QVBoxLayout()
-        # self.log = QTextEdit()
-        # self.log.setLineWrapMode(QTextEdit.LineWrapMode.NoWrap)
-        # self.log.setReadOnly(True)
-        # log_layout.addWidget(self.log)
-
         outer_layout = QVBoxLayout()
         outer_layout.addLayout(control_layout)
-        # outer_layout.addLayout(log_layout)
         window = QWidget()
         window.setLayout(outer_layout)
         self.setCentralWidget(window)

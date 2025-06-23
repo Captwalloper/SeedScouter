@@ -11,7 +11,7 @@ Short and sweet cliffnotes for anyone working with this project. (Probably just 
 
 ## Distribute (Windows only)
 * [pyinstaller](https://pyinstaller.org/en/stable/)
-* *fresh start only* `pyi-makespec --onefile --windowed --name BlitzLog app.py`
+* *fresh start only* `pyi-makespec --onefile --windowed --name SeedScouter app/app.py`
 * `pyinstaller --clean BlitzLog.spec`
 * use Microsoft's DebugView to check the runtime errors
 
